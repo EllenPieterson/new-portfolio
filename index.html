@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Ellen Pieterson</title>
+</head>
+
+<body>
+    <section class="landing">
+        <section class="navbar">
+            <div id="navitems">
+                <!-- to ensure the burger icon doesn't overlap the about link i temporarily used breaks MUST FIND A BETTER WAY TO SOLVE! -->
+                <br><br><br><br>
+                <a class="about" href="#about">ABOUT</a>
+                <a class="skills" href="#skills">SKILLS</a>
+                <a class="projects" href="#projects">PROJECTS</a>
+                <a class="contact" href="#contact">CONTACT</a>
+            </div>
+
+            <a href="javascript:void(0);" class="icon" onclick="burgerFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </section>
+        <img id="landingimage" src="Images/IMG_9822.jpg" alt="background-image">
+        <h1 id="nameTyping"></h1>
+        <!-- <a href="#aboutsection"><i class="fas fa-angle-down bounce"></i></a> -->
+        <!-- <i class="fas fa-angle-down"></i> -->
+        <!-- <a href="#about">
+            <i class="fas fa-angle-double-down"></i>
+        </a> -->
+    </section>
+    <br><br><br><br>
+    <section id="about">
+        <h1>About</h1>
+        <br><br><br>
+        <div class="bio">
+            <p>Hi and welcome to my page! My name is Ellen Pieterson and I am a Software Developer.
+                At school the subjects I enjoyed the most were those which had a problem solving element, such as
+                Mathematics and Physics.
+                This passion led me to studying a degree in Engineering Business Management at the University of
+                Warwick. It was here
+                that I had my first taste of using code to tackle a problem and I've been hooked since!</p>
+
+            <img id="bio-image" src="Images/IMG_7437.jpg" alt="bio-image">
+
+            <p>My 12-week _Nology journey to becoming a Software Developer has been nothing short of amazing; in such a
+                short period of
+                time I've have become a more confident developer and professional.
+                This website details some of my experiences, please explore the page and feel free to let
+                me know what you think using the contact information at the bottom of the page!</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h1>Skills</h1>
+        <div class="skill-icons">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-sass"></i>
+            <i class="fab fa-js-square"></i>
+            <i class="fab fa-react"></i>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h1>Projects</h1>
+        <div class="project-cards">
+            <div id="project1">
+                <img src="Images/IMG_9739.jpg" alt="screenshot">
+                <div class="projectcont">
+                    <h4>PROJECT 1</h4>
+                    <p>Brief description of the project</p>
+                </div>
+            </div>
+
+            <div id="project2">
+                <img src="Images/IMG_9739.jpg" alt="screenshot">
+                <div class="projectcont">
+                    <h4>PROJECT 2</h4>
+                    <p>Brief description of the project</p>
+                </div>
+            </div>
+
+            <div id="project3">
+                <img src="Images/IMG_9739.jpg" alt="screenshot">
+                <div class="projectcont">
+                    <h4>PROJECT 3</h4>
+                    <p>Brief description of the project</p>
+                </div>
+            </div>
+
+            <div id="project4">
+                <img src="Images/IMG_9739.jpg" alt="screenshot">
+                <div class="projectcont">
+                    <h4>PROJECT 4</h4>
+                    <p>Brief description of the project</p>
+                </div>
+            </div>
+    </section>
+    <section id="contact">
+        <h1>Contact</h1>
+        <section class="copyright">
+            <p>Copyright © 2020 ELLEN. Ellen is not responsible for the content of external sites.</p>
+        </section>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/typeit@6.1.1/dist/typeit.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
