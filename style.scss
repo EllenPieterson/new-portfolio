@@ -1,13 +1,22 @@
-* {
+body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #0a0a0a;
+    background-color: #eeeeee;
+    // background-color: white;
+}
+
+* {
+    margin: 0;
 }
 
 .landing {
+    background-color: #0a0a0a;
+    height: 100vh;
     .navbar {
         overflow: hidden;
         background-color: #0a0a0a;
         position: relative;
+
+    
         
         #navitems {
             display: none;
@@ -35,19 +44,18 @@
             left: 0;
             top: 0;
         }
-        .about {
+        .about, .projects, .contact {
             font-size: 30px;
         }
-        .skills {
-            font-size: 30px;
-        }
-        .projects {
-            font-size: 30px;
-        }
-        .contact {
-            font-size: 30px;
-        }
+        
 
+    }
+
+    .intro {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100%;
     }
 
     #landingimage {
@@ -64,23 +72,24 @@
         font-weight: bold;
         font-size: 30px;
         font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        height: 70px;
     }
 
-    // .fas.fa-angle-double-down{
-    //     position: relative;
-    //     top: 100px;
-    // }
-
-    // .fas.fa-angle-down.bounce {
-    //     border: 2px solid red;
-    //     color: white;
-    // }
+    #chevron {
+        text-align: center;
+        i {
+            color: silver;
+        }
+    }
 
 } 
 
 #about {
+    // background-color: #eeeeee;
+    
     h1 {
-        color: silver;
+        color: #0a0a0a;
         font-weight: bold;
         font-size: 40px;
         font-family: Arial, Helvetica, sans-serif;
@@ -89,22 +98,41 @@
 
     .bio {
         display: flex;
-        p{
-            color: grey;
-            font-size: 20px;
-            line-height: 35px;
+        justify-content: space-around;
+        padding: 30px;
+
+        .img {
+            background-image: url("./Images/about-img.jpg");
+            background-size: contain;
+            background-position: top;
+            background-repeat: no-repeat;
+            width: 200px;
         }
 
-        #bio-image {
-            width: 30%;
-            height: 30%;
-            transform: rotate(90deg);
+        > * {
+            width: 300px;
+            &:nth-child(2) {
+                #bio-image {
+                    height: 100%;
+                    transform: rotate(90deg);
+                    margin: 0 auto;
+                    position: relative;
+                }
+            }
+        }
+
+        p {
+            color: #0a0a0a;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: justify;
         }
     }   
 }
 
 #skills {
-    border: 2px solid green;
+    padding: 10px;
+    padding-bottom: 40px;
     h1 {
         color: silver;
         font-weight: bold;
@@ -114,24 +142,37 @@
     }
 
     .skill-icons {
-        color: red;
-        width: 100px;
-        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
 
-        .fab.fa-html5 {
-            color: silver;
-            width: 400px;
+        p, i {
+            text-align: center;
+            color: #f71e6e;
+            width: 150px;
         }
+
+        p {
+            color: #0a0a0a;
+        }
+
     }
 }
 
 #projects {
-    border: 2px solid blue;
     h1 {
-        color: silver;
+        color: #0a0a0a;
         font-weight: bold;
         font-size: 40px;
         font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    h3 {
+        color: #0a0a0a;
+        font-size: 20px;
+        line-height: 35px;
         text-align: center;
     }
 
@@ -140,13 +181,33 @@
         justify-content: space-around;
         flex-wrap: wrap;
 
+        .project-links {
+            color: #f71e6e;
+            display: flex;
+            text-align: center;
+            justify-content: space-evenly;
+        }
+
         #project1, #project2, #project3, #project4 {
-            border: 5px solid silver;
+            border: 5px solid #0a0a0a;
             border-radius: 5px;
 
             img {
                 width: 250px;
                 height: 250px;
+            }
+
+            h4 {
+            color: #0a0a0a;
+            font-size: 20px;
+            text-emphasis: bold;
+            text-align: center;
+            }
+
+            p {
+            color: grey;
+            font-size: 13px;
+            text-align: center;
             }
         }
     }
@@ -155,17 +216,85 @@
 }
 
 #contact {
-    // border: 2px solid black;
+    h1 {
+        color: #0a0a0a;
+        font-weight: bold;
+        font-size: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    h3 {
+        color: #0a0a0a;
+        text-align: center;
+    }
+    .contact-icons {
+        display: flex;
+        justify-content: space-evenly;
+        color: #0a0a0a;
+    }
+
+    p {
+        color: grey;
+        font-size: 13px;
+        text-align: center;
+        }
 } 
 
-// @media screen and (max-width: 600px) {
-//     .landing {
-//         #landingimage {
-//             display: block;
-//             margin-top: 50px;
-//             margin-left: auto;
-//             margin-right: auto;
-//             width: 40%;
-//             height: auto;
-//         }
-//     }
+@media screen and (max-width: 950px) {
+    .bio > * {
+        width: 200px;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .bio {
+        flex-direction: column;
+
+        > * {
+            width: 100% !important;
+            padding: 20px;
+        }
+
+        .img {
+            height: 300px;
+        }
+    }
+
+    #skills {
+        .skill-icons {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .landing {
+        h1 {
+            height: 5px;
+        }
+        #landingimage {
+            display: block;
+            position: relative;
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            //height: auto;
+        }
+    }
+
+    #about {
+        
+        .bio {
+            flex-direction: column;
+        }
+        
+    }
+
+    #project1, #project2, #project3 {
+        margin-bottom: 25px;
+    }
+}

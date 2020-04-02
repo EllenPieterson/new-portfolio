@@ -1,6 +1,15 @@
-* {
+body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #eeeeee;
+}
+
+* {
+  margin: 0;
+}
+
+.landing {
   background-color: #0a0a0a;
+  height: 100vh;
 }
 
 .landing .navbar {
@@ -36,20 +45,21 @@
   top: 0;
 }
 
-.landing .navbar .about {
+.landing .navbar .about, .landing .navbar .projects, .landing .navbar .contact {
   font-size: 30px;
 }
 
-.landing .navbar .skills {
-  font-size: 30px;
-}
-
-.landing .navbar .projects {
-  font-size: 30px;
-}
-
-.landing .navbar .contact {
-  font-size: 30px;
+.landing .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 
 .landing #landingimage {
@@ -66,10 +76,20 @@
   font-weight: bold;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  height: 70px;
+}
+
+.landing #chevron {
+  text-align: center;
+}
+
+.landing #chevron i {
+  color: silver;
 }
 
 #about h1 {
-  color: silver;
+  color: #0a0a0a;
   font-weight: bold;
   font-size: 40px;
   font-family: Arial, Helvetica, sans-serif;
@@ -80,23 +100,41 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px;
+}
+
+#about .bio .img {
+  background-image: url("./Images/about-img.jpg");
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 200px;
+}
+
+#about .bio > * {
+  width: 300px;
+}
+
+#about .bio > *:nth-child(2) #bio-image {
+  height: 100%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin: 0 auto;
+  position: relative;
 }
 
 #about .bio p {
-  color: grey;
-  font-size: 20px;
-  line-height: 35px;
-}
-
-#about .bio #bio-image {
-  width: 30%;
-  height: 30%;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  color: #0a0a0a;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: justify;
 }
 
 #skills {
-  border: 2px solid green;
+  padding: 10px;
+  padding-bottom: 40px;
 }
 
 #skills h1 {
@@ -108,25 +146,40 @@
 }
 
 #skills .skill-icons {
-  color: red;
-  width: 100px;
-  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
 }
 
-#skills .skill-icons .fab.fa-html5 {
-  color: silver;
-  width: 400px;
+#skills .skill-icons p, #skills .skill-icons i {
+  text-align: center;
+  color: #f71e6e;
+  width: 150px;
 }
 
-#projects {
-  border: 2px solid blue;
+#skills .skill-icons p {
+  color: #0a0a0a;
 }
 
 #projects h1 {
-  color: silver;
+  color: #0a0a0a;
   font-weight: bold;
   font-size: 40px;
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+#projects h3 {
+  color: #0a0a0a;
+  font-size: 20px;
+  line-height: 35px;
   text-align: center;
 }
 
@@ -140,13 +193,120 @@
       flex-wrap: wrap;
 }
 
+#projects .project-cards .project-links {
+  color: #f71e6e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 #projects .project-cards #project1, #projects .project-cards #project2, #projects .project-cards #project3, #projects .project-cards #project4 {
-  border: 5px solid silver;
+  border: 5px solid #0a0a0a;
   border-radius: 5px;
 }
 
 #projects .project-cards #project1 img, #projects .project-cards #project2 img, #projects .project-cards #project3 img, #projects .project-cards #project4 img {
   width: 250px;
   height: 250px;
+}
+
+#projects .project-cards #project1 h4, #projects .project-cards #project2 h4, #projects .project-cards #project3 h4, #projects .project-cards #project4 h4 {
+  color: #0a0a0a;
+  font-size: 20px;
+  -webkit-text-emphasis: bold;
+          text-emphasis: bold;
+  text-align: center;
+}
+
+#projects .project-cards #project1 p, #projects .project-cards #project2 p, #projects .project-cards #project3 p, #projects .project-cards #project4 p {
+  color: grey;
+  font-size: 13px;
+  text-align: center;
+}
+
+#contact h1 {
+  color: #0a0a0a;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+#contact h3 {
+  color: #0a0a0a;
+  text-align: center;
+}
+
+#contact .contact-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: #0a0a0a;
+}
+
+#contact p {
+  color: grey;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media screen and (max-width: 950px) {
+  .bio > * {
+    width: 200px;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .bio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bio > * {
+    width: 100% !important;
+    padding: 20px;
+  }
+  .bio .img {
+    height: 300px;
+  }
+  #skills .skill-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .landing h1 {
+    height: 5px;
+  }
+  .landing #landingimage {
+    display: block;
+    position: relative;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  #about .bio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #project1, #project2, #project3 {
+    margin-bottom: 25px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
