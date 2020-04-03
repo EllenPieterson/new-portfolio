@@ -37,12 +37,9 @@ body {
 }
 
 .landing .navbar a.icon {
-  background: #0a0a0a;
   font-size: 50px;
   display: block;
   position: fixed;
-  left: 0;
-  top: 0;
 }
 
 .landing .navbar .about, .landing .navbar .projects, .landing .navbar .contact {
